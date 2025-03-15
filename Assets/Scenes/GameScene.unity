@@ -543,6 +543,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124431104}
   m_CullTransparentMesh: 1
+--- !u!114 &164758758 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 85978882190135481, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+  m_PrefabInstance: {fileID: 5220519551676918834}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &354403377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,7 +1994,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 7
+  m_AdditionalShaderChannelsFlag: 31
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2385,6 +2396,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2506,6 +2518,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691ab80612b23064da3e017ad202ba6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachine: {fileID: 0}
+  globalCamera: {fileID: 1027444865}
+  camerasInstruments:
+  - {fileID: 164758758}
 --- !u!1 &1018889515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,7 +2761,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 20
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -4674,6 +4702,10 @@ PrefabInstance:
     - target: {fileID: 569812532354441, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 85978882190135481, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: m_Priority
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2086807350423876822, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_Camera
