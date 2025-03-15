@@ -17,6 +17,8 @@ public class InstrumentController : MonoBehaviour
 
     public InputActionReference pressArcAction;
 
+    public Transform splitParent;
+
     [Header("Events")]
     public UnityEvent<int> OnEventStart;
     public UnityEvent OnEventStop;
@@ -115,5 +117,14 @@ public class InstrumentController : MonoBehaviour
         running = false;
         currentStep = 0;
         timer = 0;
+    }
+
+    public void ClearSplits()
+    {
+        melody = new int[32];
+        foreach (Transform child in splitParent)
+        {
+            Destroy(child.gameObject);
+        }
     }
 }
