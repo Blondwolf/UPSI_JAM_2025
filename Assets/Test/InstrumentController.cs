@@ -7,6 +7,9 @@ public class InstrumentController : MonoBehaviour
     public int[] melody = new int[32];
     public int bpm;
 
+    public int selectedNote = 1;
+    //public Color selectedColor = Color.green;
+
     private float timePerStep;
 
     private int currentStep = 0;
@@ -14,14 +17,20 @@ public class InstrumentController : MonoBehaviour
 
     public InputActionReference pressArcAction;
 
+    [Header("Events")]
     public UnityEvent<int> OnEventStart;
     public UnityEvent OnEventStop;
 
     private bool drawing = false;
 
+
     void Start()
     {
         timePerStep = 60f / bpm;
+
+        WheelRotateController wheel = GetComponentInChildren<WheelRotateController>();
+        wheel.bpm = bpm;
+        wheel.beatsNumber = melody.Length;
     }
 
     void Update()
@@ -65,7 +74,7 @@ public class InstrumentController : MonoBehaviour
     {
         if (drawing)
         {
-            melody[currentStep] = 1;
+            melody[currentStep] = selectedNote;
         }
     }
 
@@ -81,8 +90,13 @@ public class InstrumentController : MonoBehaviour
         }
     }
 
-    public void FillStepWith(int position, int value)
+    public void SelectNote(int note, Color color)
     {
-
+        selectedNote = note;
     }
+
+    //public void FillStepWith(int position, int value)
+    //{
+
+    //}
 }

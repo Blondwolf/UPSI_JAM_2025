@@ -16,6 +16,8 @@ public class ArcDrawer : MonoBehaviour
     private GameObject currentArcObject;
     public GameObject parent;
 
+    int count = 0;
+
     void OnEnable()
     {
         pressArcAction.action.started += StartDrawing;
@@ -34,7 +36,7 @@ public class ArcDrawer : MonoBehaviour
     {
         currentArcObject = new GameObject("ArcSegment");
         currentArcObject.transform.SetParent(transform);
-        currentArcObject.transform.localPosition = Vector3.zero;
+        currentArcObject.transform.localPosition = Vector3.zero - Vector3.forward * 0.02f * count;
         //currentArcObject.transform.rotation = Quaternion.Euler(0, 0, 90);
 
         MeshFilter meshFilter = currentArcObject.AddComponent<MeshFilter>();
@@ -56,6 +58,8 @@ public class ArcDrawer : MonoBehaviour
         startAngle = 90;
         endAngle = startAngle;
         isDrawing = true;
+
+        count++;
     }
 
     void StopDrawing(InputAction.CallbackContext context)
@@ -107,5 +111,10 @@ public class ArcDrawer : MonoBehaviour
         mesh.triangles = triangles;
         mesh.colors = colors;
         mesh.RecalculateNormals();
+    }
+
+    public void SelectNote(int value, Color color)
+    {
+        fillColor = color;
     }
 }
