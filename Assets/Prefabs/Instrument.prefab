@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 8225835413694725598}
   - component: {fileID: 8576365796085109615}
   - component: {fileID: 3576182980129986654}
+  - component: {fileID: 2354097038383901822}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -292,7 +293,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8576365796085109615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2354097038383901822}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2354097038383901822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423167746245127230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &519120678372221037
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,6 +357,7 @@ GameObject:
   - component: {fileID: 4417029074387485574}
   - component: {fileID: 2075707943648440107}
   - component: {fileID: 5803405245724410806}
+  - component: {fileID: 1505715548487086}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -412,7 +465,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075707943648440107}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1505715548487086}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1505715548487086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519120678372221037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &880005032448712838
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +772,140 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1015298741809338887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4957939645310079879}
+  - component: {fileID: 7399291924983667837}
+  - component: {fileID: 5761247943167616680}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4957939645310079879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015298741809338887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7299505840050169728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7399291924983667837
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015298741809338887}
+  m_CullTransparentMesh: 1
+--- !u!114 &5761247943167616680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015298741809338887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Clear
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1233108438422031091
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +918,7 @@ GameObject:
   - component: {fileID: 6061973920779895884}
   - component: {fileID: 1235615537945708690}
   - component: {fileID: 6155220849497515205}
+  - component: {fileID: 5974277342755191095}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -787,7 +1026,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1235615537945708690}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5974277342755191095}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5974277342755191095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233108438422031091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1354235849467954066
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +1126,7 @@ GameObject:
   - component: {fileID: 4156643521555685488}
   - component: {fileID: 63806495655576107}
   - component: {fileID: 3490224123499933892}
+  - component: {fileID: 5856125211489517271}
   m_Layer: 5
   m_Name: Image (6)
   m_TagString: Untagged
@@ -943,7 +1234,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 63806495655576107}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5856125211489517271}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5856125211489517271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2170393830005194218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2355002578914864265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1381,127 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AngularDamping: 0
+--- !u!1 &2711088458297333492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7299505840050169728}
+  - component: {fileID: 4618220537190811420}
+  - component: {fileID: 4036129472763686584}
+  - component: {fileID: 8846782714503199394}
+  m_Layer: 5
+  m_Name: ButtonClear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7299505840050169728
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711088458297333492}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.018889, y: 0.018889, z: 0.018889}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4957939645310079879}
+  m_Father: {fileID: 7570985453718920376}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.68, y: 3.59}
+  m_SizeDelta: {x: 93.31, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4618220537190811420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711088458297333492}
+  m_CullTransparentMesh: 1
+--- !u!114 &4036129472763686584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711088458297333492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8846782714503199394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2711088458297333492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 4036129472763686584}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3513319161410967877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,6 +1657,7 @@ GameObject:
   - component: {fileID: 8194295638738725633}
   - component: {fileID: 6855688302232433466}
   - component: {fileID: 6325129902482148408}
+  - component: {fileID: 3696379461796687746}
   m_Layer: 5
   m_Name: Image (5)
   m_TagString: Untagged
@@ -1301,7 +1765,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6855688302232433466}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3696379461796687746}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3696379461796687746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797755151492497865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4425498329254786265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   melody: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  bpm: 134
+  bpm: 238
+  selectedNote: 1
   pressArcAction: {fileID: 2070342430074684743, guid: 8fc48607aa299514e830fb52137feb9a, type: 3}
   OnEventStart:
     m_PersistentCalls:
@@ -1405,7 +1921,7 @@ MonoBehaviour:
       Data2: 1232584637
       Data3: 702212245
       Data4: 1257114943
-    Path: event:/INSTRUMENTS/INSTRUMENTS MELODIQUES/BASS PLUCK
+    Path: event:/INSTRUMENTS/INSTRUMENTS MELODIQUES/BASS
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -1414,7 +1930,7 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params:
-  - Name: Bass pluck note
+  - Name: Bass note
     Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -1444,6 +1960,7 @@ GameObject:
   - component: {fileID: 855671492101955819}
   - component: {fileID: 6881912090480649188}
   - component: {fileID: 7826902328612730482}
+  - component: {fileID: 2159743041004638744}
   m_Layer: 5
   m_Name: Image (7)
   m_TagString: Untagged
@@ -1551,7 +2068,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6881912090480649188}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2159743041004638744}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2159743041004638744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4484492237060274328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4977001004667742470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +2282,7 @@ GameObject:
   - component: {fileID: 924576422886689805}
   - component: {fileID: 2814033089836037052}
   - component: {fileID: 4299784005057050905}
+  - component: {fileID: 4149476416090195826}
   m_Layer: 5
   m_Name: Image (4)
   m_TagString: Untagged
@@ -1821,7 +2390,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2814033089836037052}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4149476416090195826}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4149476416090195826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427042678561482081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5458521355992391024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +2561,7 @@ GameObject:
   - component: {fileID: 160486386522849266}
   - component: {fileID: 3991772101420906217}
   - component: {fileID: 7107981297688897949}
+  - component: {fileID: 3258340485756839992}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -2048,7 +2669,58 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3991772101420906217}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3258340485756839992}
+        m_TargetAssemblyTypeName: ColorClickListener, Assembly-CSharp
+        m_MethodName: SelectColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3258340485756839992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5800729034020216606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc4c6df29b230645a57aa812411f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4448448966768330449}
+        m_TargetAssemblyTypeName: InstrumentController, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3005986095106122964}
+        m_TargetAssemblyTypeName: ArcDrawer, Assembly-CSharp
+        m_MethodName: SelectNote
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5850369570740215436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2755,7 @@ RectTransform:
   - {fileID: 303859902103048988}
   - {fileID: 995180199264711863}
   - {fileID: 2000089058395915236}
+  - {fileID: 7299505840050169728}
   m_Father: {fileID: 3271131025836479348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2249,7 +2922,7 @@ MonoBehaviour:
   rotatingWheel: {fileID: 635624510815545783}
   radius: 1.45
   segments: 8
-  fillColor: {r: 1, g: 0, b: 0, a: 0.7058824}
+  fillColor: {r: 0, g: 0.9960785, b: 0, a: 1}
   splitMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   pressArcAction: {fileID: 2070342430074684743, guid: 8fc48607aa299514e830fb52137feb9a, type: 3}
   startAngle: 0
