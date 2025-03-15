@@ -13,7 +13,7 @@ public class InstrumentController : MonoBehaviour
     private float timePerStep;
 
     private int currentStep = 0;
-    private float timer = 0;
+    private float timeSinceStarted = 0;
 
     public InputActionReference pressArcAction;
 
@@ -40,14 +40,15 @@ public class InstrumentController : MonoBehaviour
         if (!running)
             return;
 
-        timer += Time.deltaTime;
+        timeSinceStarted += Time.deltaTime;
 
-        if (timer >= timePerStep)
+        if (timeSinceStarted >= timePerStep)
         {
-            timer -= timePerStep;
+            timeSinceStarted -= timePerStep;
             RecordStep();
             PlayStep();
             currentStep = (currentStep + 1) % melody.Length;
+            Debug.Log(Time.time);
         }
     }
 
@@ -116,7 +117,7 @@ public class InstrumentController : MonoBehaviour
     {
         running = false;
         currentStep = 0;
-        timer = 0;
+        timeSinceStarted = 0;
     }
 
     public void ClearSplits()
