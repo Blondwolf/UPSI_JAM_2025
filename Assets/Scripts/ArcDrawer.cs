@@ -35,7 +35,7 @@ public class ArcDrawer : MonoBehaviour
         currentArcObject = new GameObject("ArcSegment");
         currentArcObject.transform.SetParent(transform);
         currentArcObject.transform.localPosition = Vector3.zero;
-        currentArcObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+        //currentArcObject.transform.rotation = Quaternion.Euler(0, 0, 90);
 
         MeshFilter meshFilter = currentArcObject.AddComponent<MeshFilter>();
         MeshRenderer meshRenderer = currentArcObject.AddComponent<MeshRenderer>();
@@ -53,7 +53,7 @@ public class ArcDrawer : MonoBehaviour
 
         meshFilter.mesh = new Mesh();
 
-        startAngle = 0;
+        startAngle = 90;
         endAngle = startAngle;
         isDrawing = true;
     }
