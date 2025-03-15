@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -35,20 +36,41 @@ public class InstrumentController : MonoBehaviour
         wheel.beatsNumber = melody.Length;
     }
 
-    void Update()
+    //void Update()
+    //{
+    //    if (!running)
+    //        return;
+
+    //    timeSinceStarted += Time.deltaTime;
+
+    //    if (timeSinceStarted >= timePerStep)
+    //    {
+    //        timeSinceStarted -= timePerStep;
+    //        RecordStep();
+    //        PlayStep();
+    //        currentStep = (currentStep + 1) % melody.Length;
+    //        Debug.Log(timeSinceStarted);
+    //    }
+    //}
+
+    IEnumerator PlayMelody()
     {
-        if (!running)
-            return;
+        float nextStepTime = Time.time;
 
-        timeSinceStarted += Time.deltaTime;
-
-        if (timeSinceStarted >= timePerStep)
+        while (running)
         {
-            timeSinceStarted -= timePerStep;
-            RecordStep();
-            PlayStep();
-            currentStep = (currentStep + 1) % melody.Length;
-            Debug.Log(Time.time);
+            if (Time.time >= nextStepTime)
+            {
+                RecordStep();
+                PlayStep();
+                currentStep = (currentStep + 1) % melody.Length;
+
+                Debug.Log("Step: " + currentStep);
+
+                nextStepTime += timePerStep;
+            }
+
+            yield return null;
         }
     }
 
@@ -111,6 +133,7 @@ public class InstrumentController : MonoBehaviour
     public void StartRunning()
     {
         running = true;
+        StartCoroutine(PlayMelody());
     }
 
     public void StopRunning()

@@ -14,7 +14,7 @@ public class CameraManager : MonoBehaviour
     {
         globalCamera.gameObject.SetActive(false);
     }
-
+     
     public void Back()
     {
         globalCamera.gameObject.SetActive(true);

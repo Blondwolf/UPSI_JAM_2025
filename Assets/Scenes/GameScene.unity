@@ -5131,6 +5131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instrument_Bass
       objectReference: {fileID: 0}
+    - target: {fileID: 4448448966768330449, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: bpm
+      value: 268
+      objectReference: {fileID: 0}
     - target: {fileID: 4911403431750438741, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
