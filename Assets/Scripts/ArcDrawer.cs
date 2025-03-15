@@ -1,25 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class ArcDrawer : MonoBehaviour
 {
-    public Transform rotatingWheel;  // La roue qui tourne
-    public float radius = 2f;
+    public WheelRotateController rotatingWheel;  // La roue qui tourne
+    public float radius = 1.4f;
     public int segments = 30;
     public Color fillColor = Color.red;
-    public InputActionReference pressArcAction;  // Référence à l'input action
+    public Material splitMaterial;  // Matériau personnalisé pour les arcs
+    public InputActionReference pressArcAction;
 
-    private Mesh mesh;
     public float startAngle;
     public float endAngle;
     private bool isDrawing = false;
-
-    void Awake()
-    {
-        mesh = new Mesh();
-        GetComponent<MeshFilter>().mesh = mesh;
-    }
+    private GameObject currentArcObject;
+    public GameObject parent;
 
     void OnEnable()
     {
@@ -37,7 +32,28 @@ public class ArcDrawer : MonoBehaviour
 
     void StartDrawing(InputAction.CallbackContext context)
     {
-        startAngle = rotatingWheel.eulerAngles.z;
+        currentArcObject = new GameObject("ArcSegment");
+        currentArcObject.transform.SetParent(transform);
+        currentArcObject.transform.localPosition = Vector3.zero;
+        currentArcObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+
+        MeshFilter meshFilter = currentArcObject.AddComponent<MeshFilter>();
+        MeshRenderer meshRenderer = currentArcObject.AddComponent<MeshRenderer>();
+
+        // Appliquer le matériau personnalisé (ou un fallback)
+        if (splitMaterial != null)
+        {
+            meshRenderer.material = splitMaterial;
+        }
+        else
+        {
+            meshRenderer.material = new Material(Shader.Find("Unlit/Color"));
+            meshRenderer.material.color = fillColor;
+        }
+
+        meshFilter.mesh = new Mesh();
+
+        startAngle = 0;
         endAngle = startAngle;
         isDrawing = true;
     }
@@ -45,18 +61,19 @@ public class ArcDrawer : MonoBehaviour
     void StopDrawing(InputAction.CallbackContext context)
     {
         isDrawing = false;
+        currentArcObject.transform.SetParent(parent.transform);
     }
 
     void Update()
     {
-        if (isDrawing)
+        if (isDrawing && currentArcObject != null)
         {
-            endAngle = rotatingWheel.eulerAngles.z;
-            GenerateArcMesh();
+            endAngle -= rotatingWheel.RotationSpeed * Time.deltaTime; //+rotatingWheel.eulerAngles.z;
+            GenerateArcMesh(currentArcObject.GetComponent<MeshFilter>().mesh);
         }
     }
 
-    void GenerateArcMesh()
+    void GenerateArcMesh(Mesh mesh)
     {
         mesh.Clear();
 
@@ -65,7 +82,6 @@ public class ArcDrawer : MonoBehaviour
         int[] triangles = new int[segments * 3];
         Color[] colors = new Color[verticesCount];
 
-        // Centre du cercle
         vertices[0] = Vector3.zero;
         colors[0] = fillColor;
 
