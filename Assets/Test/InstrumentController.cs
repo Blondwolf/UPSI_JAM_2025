@@ -86,7 +86,8 @@ public class InstrumentController : MonoBehaviour
     {
         if (melody[currentStep] != 0)
         {
-            OnEventStart?.Invoke(melody[currentStep]);
+            // Notes start at 0 but software start with 1 so => -1
+            OnEventStart?.Invoke(melody[currentStep] - 1); 
         }
         else
         {
