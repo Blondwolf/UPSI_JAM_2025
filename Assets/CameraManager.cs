@@ -22,14 +22,25 @@ public class CameraManager : MonoBehaviour
 
     public void NextInstrument()
     {
-        // tODO limit
-
         currentIndex++;
+
+        // Limit to last
+        if(currentIndex >= camerasInstruments.Count)
+        {
+            currentIndex = camerasInstruments.Count - 1;
+        }
+
         camerasInstruments[currentIndex].gameObject.SetActive(true);
     }
 
     public void PreviousInstrument()
     {
+        if (currentIndex <= 0)
+        {
+            currentIndex = 0;
+            return;
+        }
+
         camerasInstruments[currentIndex].gameObject.SetActive(false);
         currentIndex--;
     }
