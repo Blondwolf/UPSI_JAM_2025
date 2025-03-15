@@ -22,7 +22,7 @@ public class InstrumentController : MonoBehaviour
     public UnityEvent OnEventStop;
 
     private bool drawing = false;
-
+    bool running = false;
 
     void Start()
     {
@@ -35,6 +35,9 @@ public class InstrumentController : MonoBehaviour
 
     void Update()
     {
+        if (!running)
+            return;
+
         timer += Time.deltaTime;
 
         if (timer >= timePerStep)
@@ -62,7 +65,8 @@ public class InstrumentController : MonoBehaviour
 
     void StartDrawing()
     {
-        drawing = true;
+        if (running)
+            drawing = true;
     }
 
     void StopDrawing()
@@ -99,4 +103,16 @@ public class InstrumentController : MonoBehaviour
     //{
 
     //}
+
+    public void StartRunning()
+    {
+        running = true;
+    }
+
+    public void StopRunning()
+    {
+        running = false;
+        currentStep = 0;
+        timer = 0;
+    }
 }

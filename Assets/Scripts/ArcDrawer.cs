@@ -18,6 +18,8 @@ public class ArcDrawer : MonoBehaviour
 
     int count = 0;
 
+    bool running = false;
+
     void OnEnable()
     {
         pressArcAction.action.started += StartDrawing;
@@ -34,6 +36,9 @@ public class ArcDrawer : MonoBehaviour
 
     void StartDrawing(InputAction.CallbackContext context)
     {
+        if (!running)
+            return;
+
         currentArcObject = new GameObject("ArcSegment");
         currentArcObject.transform.SetParent(transform);
         currentArcObject.transform.localPosition = Vector3.zero - Vector3.forward * 0.02f * count;
@@ -64,12 +69,20 @@ public class ArcDrawer : MonoBehaviour
 
     void StopDrawing(InputAction.CallbackContext context)
     {
+        if (!running)
+            return;
+
         isDrawing = false;
-        currentArcObject.transform.SetParent(parent.transform);
+
+        if(currentArcObject != null)
+            currentArcObject.transform.SetParent(parent.transform);
     }
 
     void Update()
     {
+        if (!running)
+            return;
+
         if (isDrawing && currentArcObject != null)
         {
             endAngle -= rotatingWheel.RotationSpeed * Time.deltaTime; //+rotatingWheel.eulerAngles.z;
@@ -116,5 +129,16 @@ public class ArcDrawer : MonoBehaviour
     public void SelectNote(int value, Color color)
     {
         fillColor = color;
+    }
+
+    public void StartRunning()
+    {
+        running = true;
+    }
+
+    public void StopRunning()
+    {
+        StopDrawing(default);
+        running = false;
     }
 }

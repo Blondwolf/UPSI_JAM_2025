@@ -9,11 +9,27 @@ public class WheelRotateController : MonoBehaviour
     private float rotationSpeed = 360f; // 1 revolution = 1 seconde with 360 speed
     public float RotationSpeed => rotationSpeed;
 
+    bool running = false;
+
     private void Update()
     {
-        rotationSpeed = 360 / CalculateDuration(bpm, beatsNumber);
+        if (running)
+        {
+            rotationSpeed = 360 / CalculateDuration(bpm, beatsNumber);
 
-        transform.Rotate(rotationSpeed * Time.deltaTime * Vector3.back);
+            transform.Rotate(rotationSpeed * Time.deltaTime * Vector3.back);
+        }
+    }
+
+    public void StartRotating()
+    {
+        running = true;
+    }
+
+    public void StopRotating()
+    {
+        running = false;
+        transform.rotation = Quaternion.identity;
     }
 
     public static float CalculateDuration(int bpm, int beats)
