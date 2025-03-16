@@ -93,6 +93,8 @@ GameObject:
   m_Component:
   - component: {fileID: 303859902103048988}
   - component: {fileID: 7818570409903228160}
+  - component: {fileID: 9157937005677732737}
+  - component: {fileID: 5567299848674467321}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -172,7 +174,48 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9157937005677732737}
+        m_TargetAssemblyTypeName: SliderValueChangeHandler, Assembly-CSharp
+        m_MethodName: SetGlobalParameter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9157937005677732737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319711878950669641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8f0944211756048b652be40f42632a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalTrigger: {fileID: 5567299848674467321}
+--- !u!114 &5567299848674467321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319711878950669641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Bass vol
+  TriggerEvent: 0
+  Value: 1
 --- !u!1 &423167746245127230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,6 +1971,7 @@ MonoBehaviour:
   OnEventStop:
     m_PersistentCalls:
       m_Calls: []
+  selected: 0
 --- !u!114 &3758162453138578056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,6 +2998,7 @@ MonoBehaviour:
   startAngle: 0
   endAngle: 0
   parent: {fileID: 7958237647320319149}
+  selected: 0
 --- !u!1 &7445862942711428110
 GameObject:
   m_ObjectHideFlags: 0

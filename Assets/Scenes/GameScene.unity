@@ -1267,6 +1267,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5567299848674467321, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: Parameter
+      value: Kick vol
+      objectReference: {fileID: 0}
     - target: {fileID: 5582838126185955465, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2005,6 +2009,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5567299848674467321, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: Parameter
+      value: Hats vol
+      objectReference: {fileID: 0}
     - target: {fileID: 5582838126185955465, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2729,6 +2737,10 @@ PrefabInstance:
     - target: {fileID: 4911403431750438741, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567299848674467321, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: Parameter
+      value: Lead vol
       objectReference: {fileID: 0}
     - target: {fileID: 5582838126185955465, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4074,6 +4086,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5567299848674467321, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: Parameter
+      value: Sfx vol
+      objectReference: {fileID: 0}
     - target: {fileID: 5582838126185955465, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5413,6 +5429,10 @@ PrefabInstance:
     - target: {fileID: 4911403431750438741, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567299848674467321, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
+      propertyPath: Parameter
+      value: Percs vol
       objectReference: {fileID: 0}
     - target: {fileID: 5582838126185955465, guid: 142e1a2304312a54d9b58ef6cdc39bad, type: 3}
       propertyPath: m_AnchorMax.y
