@@ -26,6 +26,7 @@ public class InstrumentController : MonoBehaviour
 
     private bool drawing = false;
     bool running = false;
+    public bool selected = false;
 
     void Start()
     {
@@ -90,7 +91,7 @@ public class InstrumentController : MonoBehaviour
 
     void StartDrawing()
     {
-        if (running)
+        if (running && selected)
             drawing = true;
     }
 
@@ -101,7 +102,7 @@ public class InstrumentController : MonoBehaviour
 
     void RecordStep()
     {
-        if (drawing)
+        if (drawing && selected)
         {
             melody[currentStep] = selectedNote;
         }

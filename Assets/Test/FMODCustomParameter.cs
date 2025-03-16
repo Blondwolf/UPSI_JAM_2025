@@ -9,11 +9,15 @@ public class FMODCustomParameter : MonoBehaviour
 
     private void Start()
     {
-        param = eventEmitter.Params[0];
+        if(eventEmitter.Params.Length > 0)
+            param = eventEmitter.Params[0];
     }
 
     public void SetFMODParameter(int value)
     {
+        if (param == null)
+            return;
+
         Debug.Log(value);
         //eventEmitter.SetParameter(param.Name, value);
         param.Value = value;

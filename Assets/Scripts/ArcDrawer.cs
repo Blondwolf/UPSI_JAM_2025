@@ -19,6 +19,7 @@ public class ArcDrawer : MonoBehaviour
     int count = 0;
 
     bool running = false;
+    public bool selected = false;
 
     void OnEnable()
     {
@@ -36,7 +37,7 @@ public class ArcDrawer : MonoBehaviour
 
     void StartDrawing(InputAction.CallbackContext context)
     {
-        if (!running)
+        if (!running || !selected)
             return;
 
         currentArcObject = new GameObject("ArcSegment");
@@ -69,7 +70,7 @@ public class ArcDrawer : MonoBehaviour
 
     void StopDrawing(InputAction.CallbackContext context)
     {
-        if (!running)
+        if (!running || !selected)
             return;
 
         isDrawing = false;
@@ -80,7 +81,7 @@ public class ArcDrawer : MonoBehaviour
 
     void Update()
     {
-        if (!running)
+        if (!running || !selected)
             return;
 
         if (isDrawing && currentArcObject != null)
